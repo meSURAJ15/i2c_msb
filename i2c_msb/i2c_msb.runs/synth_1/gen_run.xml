@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xa7a15tcsg324-2I" LaunchTime="1742193834">
+  <File Type="PA-TCL" Name="i2c_msb.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="i2c_msb_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="i2c_msb_reports.tcl"/>
+  <File Type="RDS-RDS" Name="i2c_msb.vds"/>
+  <File Type="RDS-UTIL" Name="i2c_msb_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="i2c_msb_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="i2c_msb.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="i2c_msb_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="i2c_msb_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../i2c_msb.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/i2c_master_byte_ctrl.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/i2c_msb_bd/i2c_msb_bd.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="i2c_msb"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
